@@ -9,8 +9,8 @@ def read_data(filename, key_file):
     values in key_file, replacing spaces with '-' in column names.  
     Returns dataframe.
 
-    :filename: aaii data file (ie TRENDING_VALUE.TXT)
-    :key_file: aaii file that tells us the column names (ie 
+    :filename: data file (ie TRENDING_VALUE.TXT)
+    :key_file: file that tells us the column names (ie 
         TRENDING_VALUE_Key.TXT
     :returns: dataframe with data from filename and columns from key_file
 
@@ -181,7 +181,7 @@ def initialize_parser():
             description='This program is designed to mirror '
 		'James O\'Shaughnessy\'s trending value portfolio '
 		'strategy and return the following: \n\t'
-            '--Take in a filename and key_file from aaii, and optional \n\t'
+            '--Take in a filename and key_file, and optional \n\t'
 	        'num_stocks and raw_data args.\n\t'
 	    '--A csv file containing data from the trending \n\t'
 	        'value stocks will be saved in the current dir.\n\t'
@@ -244,7 +244,7 @@ def main():
     
     #save raw data if flagged
     if raw_data:
-	df.to_csv('aaii_allstocks_composite_factor.csv', index=False)  
+	df.to_csv('allstocks_composite_factor.csv', index=False)  
 
 
 #run program logic:

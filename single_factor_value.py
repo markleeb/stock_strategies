@@ -8,8 +8,8 @@ def read_data(filename, key_file):
     values in key_file, replacing spaces with '-' in column names.  
     Returns dataframe.
 
-    :filename: aaii data file (ie TRENDING_VALUE.TXT)
-    :key_file: aaii file that tells us the column names (ie 
+    :filename: data file (ie TRENDING_VALUE.TXT)
+    :key_file: file that tells us the column names (ie 
         TRENDING_VALUE_Key.TXT
     :returns: dataframe with data from filename and columns from key_file
 
@@ -183,7 +183,7 @@ def main():
         
     #add decile ranking columns and save df as csv
     df = deciles(df)
-    df.to_csv('aaii_allstocks.csv',index=False)
+    df.to_csv('allstocks.csv',index=False)
 
     #save lowest decile values as csv
     if low_factor_cols != 'None':
