@@ -49,24 +49,9 @@ def corporate_actions(ticker, start, end):
     return action_data
 
 
-#def get_div_split(action_data):
-#    """takes in corporate action dataframe and returns .
-#
-#    :action_data: TODO
-#    :returns: TODO
-#
-#    """
-#    pass
-
 
 def returns(price_start, price_end, actions):
-    """Takes price difference between two dates, and adjusts for dividends and splits to produce total return as a percent.
-
-    :ticker: list of ticker symbols 
-    :start: start date
-    :end: end date
-    :returns: total return as a percentage 
-
+    """TODO: docstring
     """
 
 
@@ -119,4 +104,4 @@ def main():
     prices_div_split, change = returns(price_start, price_end, actions)
 
 if __name__=='__main__':
-    main
+    main()
